@@ -1,0 +1,38 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(Canvas))]
+public class MenuPanel : MonoBehaviour
+{
+    [SerializeField] private PanelType type;
+    private bool state;
+    private Canvas canvas;
+    private void Awake()
+    {
+        canvas = GetComponent<Canvas>();
+    }
+
+    private void UpdateState()
+    {
+        canvas.enabled = state;
+    }
+
+    public void ChangeStats()
+    {
+        state = !state;
+        UpdateState();
+    }
+
+    public void ChangeStats(bool _state)
+    {
+        state = _state;
+        UpdateState();
+    }
+
+    #region Getter
+
+    public PanelType GetPanelType() { return type; }
+
+    #endregion
+}
