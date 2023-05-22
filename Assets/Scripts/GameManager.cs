@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
  */
 public class GameManager : MonoBehaviour
 {
+    public static Champion player1, player2;
     public static GameManager instance { private set; get; }
 
     private void Awake()
