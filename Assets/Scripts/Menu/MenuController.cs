@@ -44,7 +44,7 @@ public class MenuController : MonoBehaviour
 
     public void changeScene(string _sceneName)
     {
-        manager.changeScene(_sceneName);
+        manager.ChangeScene(_sceneName);
     }
 
     public void closeGame()

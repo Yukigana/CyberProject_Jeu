@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void changeScene(string _sceneName)
+    public void ChangeScene(string _sceneName)
     {
         SceneManager.LoadScene(_sceneName);
     }

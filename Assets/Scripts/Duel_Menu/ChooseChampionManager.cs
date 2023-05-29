@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -75,8 +73,8 @@ public class ChooseChampionManager : MonoBehaviour
 
     public void OnClickStart()
     {
-        GameManager.player1 = champPlayer1;
-        GameManager.player2 = champPlayer2;
+        GameManager.player1 = new Champion(champPlayer1);
+        GameManager.player2 = new Champion(champPlayer2);
 
         SceneManager.LoadScene("Duel_FightArea");
     }
